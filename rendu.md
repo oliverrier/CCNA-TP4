@@ -234,6 +234,8 @@ Machine | `net1` | `net2`
 
     La machine qui vient de pop est notre hôte car c'est celui qui nous permet de nous connecter à internet.
 
+## Wireshark
+
 **Nouveau tableau récapitulatif** :
 
 Machine | `net1` | `net2` | Adresse MAC enp0s8 | Adresse MAC enp0s9
@@ -241,3 +243,15 @@ Machine | `net1` | `net2` | Adresse MAC enp0s8 | Adresse MAC enp0s9
 `client1.tp4` | `10.1.0.10` | X | `08:00:27:ef:c8:63` | X
 `router1.tp4` | `10.1.0.254` | `10.2.0.254` |`08:00:27:75:d5:29` | `08:00:27:4f:a8:f4`
 `server1.tp4` | X | `10.2.0.10` | `08:00:27:55:e7:4e` | X
+
+### A.Interception d'ARP et `ping`
+
+![ping.pcap](images/WiresharkPing.png)
+
+Il nous manque les trames nous montrant le passage par le routeur.
+
+### B.Interception d'une communication `netcat`
+
+![netcat_ok.pcap](images/WiresharkNetcatOk.png)
+
+![netcat_ko.pcap](images/WireSharkNetcatKo.png)
